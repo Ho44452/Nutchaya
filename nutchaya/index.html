@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nutchaya Secret</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!-- AOS Animate On Scroll CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+		<!-- tsParticles container for floating hearts -->
+		<div id="tsparticles" style="position:fixed;z-index:0;top:0;left:0;width:100vw;height:100vh;"></div>
+		<div class="card" data-aos="zoom-in" data-aos-duration="1200" style="position:relative;z-index:1;">
+				<div class="card-content">
+<img src="https://i.pinimg.com/originals/86/f2/91/86f291b4edb14ea794c7fd1ab1932e04.gif" alt="Lovely" class="numbat-img" data-aos="zoom-in" data-aos-delay="250" />
+						
+						<h2 data-aos="fade-up" data-aos-delay="400">Secret Number</h2>
+						<form id="password-form" autocomplete="off" data-aos="fade-up" data-aos-delay="600">
+								<div id="error-message" class="error-message"></div>
+								<label for="password">ใส่ตรงนี้นะจ๊ะ</label>
+								<input type="password" id="password" name="password" required autocomplete="off">
+								<br>
+								<button type="submit">Enter</button>
+						</form>
+				</div>
+		</div>
+		<!-- AOS Animate On Scroll JS -->
+		<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<!-- tsParticles for floating hearts -->
+		<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+		<script>
+			tsParticles.load("tsparticles", {
+				background: { color: "transparent" },
+				fullScreen: { enable: false },
+				particles: {
+					number: { value: 18, density: { enable: true, area: 800 } },
+					color: { value: ["#ff2d55", "#fff", "#1a1a1a"] },
+					shape: {
+						type: "char",
+						character: {
+							value: ["♥"],
+							font: "Segoe Script, cursive, Arial",
+							style: "",
+							weight: "bold"
+						}
+					},
+					opacity: { value: 0.7, random: true },
+					size: { value: 24, random: { enable: true, minimumValue: 14 } },
+					move: {
+						enable: true,
+						speed: 1.2,
+						direction: "top",
+						random: false,
+						straight: false,
+						outModes: { default: "out" }
+					},
+				},
+				detectRetina: true
+			});
+		</script>
+		<script src="js/script.js"></script>
+</body>
+</html>

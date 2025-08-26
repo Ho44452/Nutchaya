@@ -1,0 +1,222 @@
+/* Responsive Design */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding-top: 2.5rem;
+    }
+    .card {
+        max-width: 98vw;
+        padding: 1.2rem 0.5rem 1.5rem 0.5rem;
+        border-radius: 14px;
+    }
+    .numbat-img {
+        max-width: 80px;
+        border-radius: 10px;
+    }
+    .numbat-input, input[type="password"] {
+        font-size: 1rem;
+        padding: 0.5rem;
+    }
+    .numbat-btn, button {
+        font-size: 1rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 8px;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    .lovely {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .card {
+        max-width: 80vw;
+        padding: 2rem 1rem 2rem 1rem;
+        border-radius: 18px;
+    }
+    .numbat-img {
+        max-width: 100px;
+    }
+    .numbat-input, input[type="password"] {
+        font-size: 1.05rem;
+    }
+    .numbat-btn, button {
+        font-size: 1.05rem;
+        padding: 0.6rem 1.6rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .lovely {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 901px) {
+    .card {
+        max-width: 350px;
+        padding: 2.5rem 2rem 2rem 2rem;
+        border-radius: 20px;
+    }
+    .numbat-img {
+        max-width: 120px;
+    }
+    .numbat-input, input[type="password"] {
+        font-size: 1.1rem;
+    }
+    .numbat-btn, button {
+        font-size: 1.1rem;
+        padding: 0.7rem 2.2rem;
+    }
+    h2 {
+        font-size: 1.7rem;
+    }
+    .lovely {
+        font-size: 2.2rem;
+    }
+}
+/* Numbat UI inspired image styling */
+.numbat-img {
+    display: block;
+    margin: 0.5rem auto 1.2rem auto;
+    max-width: 120px;
+    border-radius: 16px;
+    border: 3px solid #ff2d55;
+    background: #fff;
+    box-shadow: 0 4px 24px 0 rgba(255,45,85,0.18);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.numbat-img:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 8px 32px 0 rgba(255,45,85,0.28);
+}
+body {
+    background: linear-gradient(135deg, #1a1a1a 60%, #ff2d55 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.card {
+    background: rgba(34, 34, 34, 0.75);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(255,45,85,0.22), 0 1.5px 8px 0 #ff2d55;
+    padding: 2.5rem 2rem 2rem 2rem;
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(8px) saturate(1.2);
+    -webkit-backdrop-filter: blur(8px) saturate(1.2);
+    border: 2.5px solid rgba(255,45,85,0.18);
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.2s;
+}
+.card:hover {
+    box-shadow: 0 12px 40px 0 rgba(255,45,85,0.32), 0 2.5px 12px 0 #ff2d55;
+    transform: scale(1.025) rotate(-0.5deg);
+    border-color: #ff2d55;
+}
+.card::after {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    padding: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: conic-gradient(from 90deg at 50% 50%, #ff2d55 0%, #fff 25%, #ff2d55 50%, #fff 75%, #ff2d55 100%);
+    opacity: 0.18;
+    filter: blur(6px);
+    animation: borderGlow 3.5s linear infinite;
+}
+@keyframes borderGlow {
+    0% { filter: blur(6px) brightness(1); opacity: 0.18; }
+    50% { filter: blur(10px) brightness(1.2); opacity: 0.28; }
+    100% { filter: blur(6px) brightness(1); opacity: 0.18; }
+}
+/* tsParticles background container */
+#tsparticles {
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+.card:before {
+    content: "";
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border-radius: 24px;
+    background: linear-gradient(135deg, #ff2d55 0%, transparent 80%);
+    z-index: 0;
+    opacity: 0.5;
+}
+.card-content {
+    position: relative;
+    z-index: 1;
+}
+h2 {
+    margin-bottom: 1.2rem;
+    color: #ff2d55;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+label {
+    display: block;
+    margin-bottom: 0.7rem;
+    font-size: 1.1rem;
+    color: #fff;
+}
+input[type="password"] {
+    width: 90%;
+    padding: 0.7rem;
+    border-radius: 8px;
+    border: 1.5px solid #ff2d55;
+    background: #181818;
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    outline: none;
+    transition: border 0.2s;
+}
+input[type="password"]:focus {
+    border: 2px solid #ff2d55;
+}
+button {
+    background: linear-gradient(90deg, #ff2d55 60%, #1a1a1a 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px 0 rgba(255,45,85,0.15);
+    transition: background 0.2s, transform 0.1s;
+}
+button:hover {
+    background: linear-gradient(90deg, #1a1a1a 0%, #ff2d55 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+.lovely {
+    font-size: 2.2rem;
+    color: #ff2d55;
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    font-family: 'Segoe Script', cursive, sans-serif;
+}
+.error-message {
+    color: #ff2d55;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    display: none;
+}
